@@ -16,21 +16,13 @@ const router = createBrowserRouter([
     errorElement: <PageNotFound/>,
     children:[
       {index:true,path:'/home',element:<Home/>},
-      {path:'filmes',element:<MovieListPage/>},
-      {path:'filmes/:id',element:<MovieDetailPage/>},
+      {path:'movies',element:<MovieListPage/>},
+      {path:'movies/:id',element:<MovieDetailPage/>},
       {path:'genero',element:<GenreListPage/>},
       {path:'genero/:id',element:<MoviesByGenrePage/>}
     ]
   }
 ])
-/* Deve ter as rotas:
-  home
-  filmes
-  Detalhes do Filme
-  Lista de gêneros
-  Filmes por gênero
-  Page Not Found
-  */
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
